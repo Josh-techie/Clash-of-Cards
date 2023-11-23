@@ -6,7 +6,7 @@ Embark on an exhilarating learning adventure with Clash of Cards, the ultimate c
 
 ## Authors:
 
-** This is a team project for ALX software engineering program betwwen me and my friend Soufiane: **
+**This is a team project for ALX software engineering program betwwen me and my friend Soufiane:**
 
-* **YOUSSEF ABOUYAHIA** <[Josh-techie](https://github.com/Josh-techie)>
-* **SOUFIANE OUMALEK** <[Soufiane-oumalek](https://github.com/soufiane-oumalek)>
+* **YOUSSEF ABOUYAHIA** [Josh-techie](https://github.com/Josh-techie)
+* **SOUFIANE OUMALEK** [Soufiane-oumalek](https://github.com/soufiane-oumalek)
