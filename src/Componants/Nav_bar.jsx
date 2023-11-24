@@ -1,12 +1,37 @@
-import React from 'react'
+import React from 'react';
 
 function Nav_bar() {
-  return (
-    <div>
-      <h1> This is the nav bar </h1>
-      <img width="30%" src='Assets/logo.png' alt='Ancient Image'></img>
-    </div>
-  )
+
+    return (
+        <div>
+            <nav>
+                <a class="navbar-brand" href="#"><img width="100" height="100" src='Assets/logo.png' alt='Ancient Image'></img></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Forum</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+         
+
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    );
 }
 
-export default Nav_bar
+export default Nav_bar;
