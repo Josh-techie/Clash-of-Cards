@@ -1,33 +1,38 @@
 import React from 'react';
 
 function Nav_bar() {
-
     return (
         <div>
-            <nav>
-                <a class="navbar-brand" href="#"><img width="100" height="100" src='Assets/logo.png' alt='Ancient Image'></img></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">Home </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Forum</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Blog</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contact</a>
-                        </li>
-         
-
-                    </ul>
+            <nav className='navbar navbar-expand-lg navbar-dark bg-dark' style={{ height: "5rem" }}>
+                <div className='container'>
+                    <a className='navbar-brand' href='/home'>
+                        <img src='Assets/logo.png' alt='bg img' width="15%" />
+                    </a>
+                    <div className='navbar-collapse align-items-center'>
+                        <ul className='navbar-nav'>
+                            <li className='nav-item'>
+                                <a className='nav-link' href='#'>Overview</a>
+                            </li>
+                            <li className='nav-item'>
+                                <a className='nav-link' href='#'>Features</a>
+                            </li>
+                            <li className='nav-item'>
+                                <a className='nav-link' href='#'>Getting Started</a>
+                            </li>
+                            <li className='nav-item'>
+                                <a className='nav-link' href='#'>Forum</a>
+                            </li>
+                            <li className='nav-item'>
+                                <a className='nav-link' href='#'>Contact Us</a>
+                            </li>
+                            <li className='nav-item' style={{ paddingRight: '2rem', paddingTop: '1rem' }}>
+                                <button className='btn btn-primary mr-1'>Play</button>
+                            </li>
+                            <li className='nav-item' style={{ paddingTop: '1rem' }}>
+                                <button className='btn btn-secondary'>Account</button>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </nav>
         </div>
