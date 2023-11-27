@@ -1,0 +1,31 @@
+
+
+
+
+.navbar {
+    padding-top: 2rem;
+    height: 5rem;
+    padding-bottom: 2rem;
+  }
+  
+  .navbar img {
+    margin-left: 2rem;
+    vertical-align: middle;
+  }
+  
+  @media (max-width: 767.98px) {
+    .navbar img {
+        position: absolute;
+        top: 0.1rem;
+
+    }
+
+    .navbar-toggler {
+        position: absolute;
+        top: 1.6rem;
+        padding: 7px;
+        right: 1rem;
+      }
+  }
+  
+
