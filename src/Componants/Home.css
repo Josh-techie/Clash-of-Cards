@@ -1,0 +1,45 @@
+/* Add these styles to your global CSS file or use styled-components */
+
+.snowflakeContainer {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    animation-name: snowflakeFall;
+    animation-duration: 4s; /* Adjust the duration to make it slower */
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out; /* Adjust the timing function for a smoother motion */
+    display: inline-block;
+    margin: 30px;
+    position: absolute;
+  }
+  
+  @keyframes snowflakeFall {
+    to {
+      transform: translateY(100vh);
+    }
+  }
+  
+  .snowflake {
+    font-size: 24px; /* Adjust the size of the FontAwesome icons */
+  }
+  
+  .everything {
+    height: 100%;
+    width: 100%;
+    background: #212121;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .ground {
+    background-color: #e0f0ef;
+    height: 8%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border: none;
+    padding: 0;
+  }
+  
