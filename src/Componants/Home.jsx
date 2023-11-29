@@ -35,7 +35,12 @@ function Home() {
   return (
     <div>
         <h2>This is the home page</h2>
-      {/* <Everything /> */}
+      <Everything />
+
+
+      {/* to tes the login and sign up forms, uncomment the following lines: */}
+      {/* <SignIn />
+      <SignUp /> */}
     </div>
   );
 }
