@@ -1,44 +1,73 @@
-import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFire } from '@fortawesome/free-solid-svg-icons';
+import React, { useState } from 'react';
+import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs';
+import { RxDotFilled } from 'react-icons/rx';
 import './Home.css';
+import slider1 from '../Slides/slide-1.jpg';
+import slider2 from '../Slides/slide-2.jpg';
 import SignIn from './SignIn';
 import SignUp from './SignUp';
 
-class Everything extends React.Component {
-  render() {
-    let snowflakes = [];
-    for (var i = 0; i < 40; i++) {
-      const position = Math.random() * 100;
-      const delay = Math.random() * 2.8;
-      const style = {
-        animationDelay: delay + 's',
-        left: position + '%',
-      };
-      snowflakes.push(
-        <div key={i} style={style} className="snowflakeContainer">
-          {/* Use FontAwesomeIcon for the fire icon */}
-          <FontAwesomeIcon icon={faFire} className="snowflake" />
-        </div>
-      );
-    }
-    return (
-      <div className="everything">
-        {snowflakes}
-        <div className="ground"></div>
-      </div>
-    );
-  }
-}
 
 function Home() {
+  const slides = [
+    {
+      url: slider1,
+    },
+    {
+      url: slider2,
+    },
+
+  ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const prevSlide = () => {
+    const isFirstSlide = currentIndex === 0;
+    const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
+    setCurrentIndex(newIndex);
+  };
+
+  const nextSlide = () => {
+    const isLastSlide = currentIndex === slides.length - 1;
+    const newIndex = isLastSlide ? 0 : currentIndex + 1;
+    setCurrentIndex(newIndex);
+  };
+
+  const goToSlide = (slideIndex) => {
+    setCurrentIndex(slideIndex);
+  };
+
+  const bgImage = '../Assets/bg.png';
+
   return (
-    <div>
-        <h2>This is the home page</h2>
-      <Everything />
+    <div style={{ backgroundImage: `url(${bgImage})`, backgroundSize: 'cover', height: '100vh' }}>
+      <img
+        src={slides[currentIndex].url}
+        alt={`Slide ${currentIndex + 1}`}
+        className='w-full h-full rounded-2xl bg-center bg-cover duration-500'
+      />
 
+      {/* Left Arrow */}
+      <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
+        <BsChevronCompactLeft onClick={prevSlide} size={30} />
+      </div>
+      {/* Right Arrow */}
+      <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
+        <BsChevronCompactRight onClick={nextSlide} size={30} />
+      </div>
+      <div className='flex top-4 justify-center py-2'>
+        {slides.map((slide, slideIndex) => (
+          <div
+            key={slideIndex}
+            onClick={() => goToSlide(slideIndex)}
+            className='text-2xl cursor-pointer'
+          >
+            <RxDotFilled />
+          </div>
+        ))}
+      </div>
 
-      {/* to tes the login and sign up forms, uncomment the following lines: */}
+      {/* Uncomment the following lines to test the login and sign-up forms */}
       {/* <SignIn />
       <SignUp /> */}
     </div>
