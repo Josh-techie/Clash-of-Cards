@@ -2,6 +2,8 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFire } from '@fortawesome/free-solid-svg-icons';
 import './Home.css';
+import SignIn from './SignIn';
+import SignUp from './SignUp';
 
 class Everything extends React.Component {
   render() {
@@ -32,8 +34,8 @@ class Everything extends React.Component {
 function Home() {
   return (
     <div>
-      <h2>This is the home page</h2>
-      <Everything />
+        <h2>This is the home page</h2>
+      {/* <Everything /> */}
     </div>
   );
 }
