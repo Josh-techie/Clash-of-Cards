@@ -46,6 +46,8 @@ function Home() {
       </div>
 
       {/* Right side with slider */}
+      <div className="here-container">
+        
       <div className="slider-container">
         <img
           src={slides[currentIndex].url}
@@ -72,6 +74,7 @@ function Home() {
               <RxDotFilled />
             </div>
           ))}
+      </div>
         </div>
       </div>
 

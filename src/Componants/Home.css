@@ -3,86 +3,92 @@
 .container-fluid {
     background-size: cover;
     height: 100vh;
-  }
-  
-  .text-container {
+}
+
+.text-container {
     width: 100%;
     padding: 4rem;
-  }
-  
-  .display-title {
+}
+
+.display-title {
     font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 1rem;
-  }
-  
-  .lead-text {
+}
+
+.lead-text {
     font-size: 1.25rem;
-  }
-  
-  .slider-container {
+}
+
+.slider-container {
     position: relative;
-    width: 70%;
-    padding-right: 5%;
+    width: 80%;
     padding-bottom: 5%;
-    user-select: none; /* Prevent text selection */
-  }
-  
-  .slider-image {
+    user-select: none;
+}
+
+.slider-image {
     width: 100%;
     height: 100%;
-    border-radius: 15px;
+    border-radius: 1.5rem;
     object-fit: cover;
     transition: opacity 0.5s ease-in-out;
-  }
-  
-  .arrow-container {
+}
+
+.arrow-container {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-  }
-  
-  .left-arrow {
+}
+
+.left-arrow {
     left: 0;
-  }
-  
-  .right-arrow {
+}
+
+.right-arrow {
     right: 0;
-  }
-  
-  .arrow-button {
-    font-size: 1.2rem;
+}
+
+.arrow-button {
+    font-size: 1.5rem;
     border-radius: 50%;
     background: rgba(0, 0, 0, 0.2);
     color: white;
     cursor: pointer;
     transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
-  }
-  
-  .arrow-button:hover {
+}
+
+.arrow-button:hover {
     background: rgba(0, 0, 0, 0.5);
     color: white;
-  }
-  
-  .dots-container {
+}
+
+.dots-container {
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
-    bottom: 0; /* Adjusted to be at the bottom */
+    bottom: 0;
+    /* Adjusted to be at the bottom */
     left: 50%;
     transform: translateX(-50%);
-    padding-bottom: 2%; /* Adjusted padding */
-  }
-  
-  .dot {
-    font-size: 1.5rem; /* Adjusted size */
+    padding-bottom: 2%;
+    /* Adjusted padding */
+}
+
+.dot {
+    font-size: 1.5rem;
+    /* Adjusted size */
     cursor: pointer;
     margin: 0 1%;
     transition: color 0.3s ease-in-out;
-  }
-  
-  .dot.active {
+}
+
+.dot.active {
     color: white;
-  }
-  
+}
+
+.here-container {
+    width: 100%;
+    height: 70%;
+}
