@@ -4,7 +4,7 @@
 }
 
 .navbar img {
-  margin-left: 2rem;
+  margin-left: 4rem;
   margin-right: 8rem;
   display: block;
 }
@@ -44,6 +44,7 @@
 
 .nav-item {
   display: inline-block;
+  color: red;
 }
 
 .nav-item a:hover {

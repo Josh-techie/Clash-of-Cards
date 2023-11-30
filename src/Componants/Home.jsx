@@ -39,36 +39,35 @@ function Home() {
     <div className="container-fluid d-flex align-items-center" style={{ backgroundImage: `url(${bgImage})`, backgroundSize: 'cover', height: '100vh' }}>
       {/* Left side with text */}
       <div className="w-100 p-4 text-container">
-        <h1 className="text-4xl font-bold mb-4">Your Title Here</h1>
-        <p className="text-lg">Your text content goes here.</p>
+        <h1 className="display-4 font-weight-bold mb-4">Your Title Here</h1>
+        <p className="lead">Your text content goes here.</p>
       </div>
 
       {/* Right side with slider */}
-      <div className="w-70 pr-20 pb-60 relative" style={{ paddingLeft: '5.5rem' }}>
+      <div className="w-70 pr-5 pb-5 position-relative">
         <img
           src={slides[currentIndex].url}
           alt={`Slide ${currentIndex + 1}`}
           className='w-100 h-100 rounded-2xl bg-center bg-cover duration-500 slider-image'
-          style={{ userSelect: 'none' }} 
         />
 
         {/* Left Arrow */}
-        <div className='absolute top-50% -translate-y-50% left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
+        <div className='position-absolute top-50% start-0 translate-middle-y text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
           <BsChevronCompactLeft onClick={prevSlide} size={20} />
         </div>
         {/* Right Arrow */}
-        <div className='absolute top-50% -translate-y-50% right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
+        <div className='position-absolute top-50% end-0 translate-middle-y text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
           <BsChevronCompactRight onClick={nextSlide} size={20} />
         </div>
         {/* Dots */}
-        <div className='flex top-4 justify-center py-2 absolute right-0 left-0 mx-auto'>
+        <div className='d-flex justify-content-center align-items-center position-absolute bottom-0 start-50 translate-middle-x py-2'>
           {slides.map((slide, slideIndex) => (
             <div
               key={slideIndex}
               onClick={() => goToSlide(slideIndex)}
-              className='text-2xl cursor-pointer'
+              className={`text-2xl cursor-pointer mx-1 ${slideIndex === currentIndex ? 'text-white' : 'text-black'}`}
             >
-              <RxDotFilled style={{ color: currentIndex === slideIndex ? 'white' : 'gray' }} />
+              <RxDotFilled />
             </div>
           ))}
         </div>

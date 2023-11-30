@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import NavBar from './NavBar';
 
 const formStyles = {
   maxWidth: '400px',
@@ -110,6 +111,7 @@ function ContactUs() {
           Submit
         </button>
       </form>
+
     </div>
   );
 }
