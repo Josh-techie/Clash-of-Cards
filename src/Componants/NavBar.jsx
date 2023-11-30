@@ -12,7 +12,7 @@ function NavBar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark mx-auto">
       <Link className="navbar-brand ml-auto" to="/">
-        <img src="Assets/logo.png" alt="Logo" width="100" height="100" />
+        <img src="Assets/logo.png" alt="Logo" width="100" height="100" style={{ userSelect: 'none' }} />
       </Link>
       <button
         className="navbar-toggler"
@@ -44,7 +44,6 @@ function NavBar() {
               Contact Us
             </Link>
           </li>
-
         </ul>
       </div>
     </nav>

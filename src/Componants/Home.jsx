@@ -4,8 +4,6 @@ import { RxDotFilled } from 'react-icons/rx';
 import './Home.css'; // Make sure to import your custom styles
 import slider1 from '../Slides/slide-1.jpg';
 import slider2 from '../Slides/slide-2.jpg';
-import SignIn from './SignIn';
-import SignUp from './SignUp';
 
 function Home() {
   const slides = [
@@ -40,27 +38,29 @@ function Home() {
   return (
     <div className="container-fluid d-flex align-items-center" style={{ backgroundImage: `url(${bgImage})`, backgroundSize: 'cover', height: '100vh' }}>
       {/* Left side with text */}
-      <div className="w-25 p-4">
+      <div className="w-100 p-4 text-container">
         <h1 className="text-4xl font-bold mb-4">Your Title Here</h1>
         <p className="text-lg">Your text content goes here.</p>
       </div>
 
       {/* Right side with slider */}
-      <div className="w-75 relative">
+      <div className="w-70 pr-20 pb-60 relative" style={{ paddingLeft: '5.5rem' }}>
         <img
           src={slides[currentIndex].url}
           alt={`Slide ${currentIndex + 1}`}
-          className='w-100 h-100 rounded-2xl bg-center bg-cover duration-500'
+          className='w-100 h-100 rounded-2xl bg-center bg-cover duration-500 slider-image'
+          style={{ userSelect: 'none' }} 
         />
 
         {/* Left Arrow */}
         <div className='absolute top-50% -translate-y-50% left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
-          <BsChevronCompactLeft onClick={prevSlide} size={30} />
+          <BsChevronCompactLeft onClick={prevSlide} size={20} />
         </div>
         {/* Right Arrow */}
-<div className='absolute top-50% -translate-y-50% right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
-          <BsChevronCompactRight onClick={nextSlide} size={30} />
+        <div className='absolute top-50% -translate-y-50% right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
+          <BsChevronCompactRight onClick={nextSlide} size={20} />
         </div>
+        {/* Dots */}
         <div className='flex top-4 justify-center py-2 absolute right-0 left-0 mx-auto'>
           {slides.map((slide, slideIndex) => (
             <div
@@ -68,7 +68,7 @@ function Home() {
               onClick={() => goToSlide(slideIndex)}
               className='text-2xl cursor-pointer'
             >
-              <RxDotFilled />
+              <RxDotFilled style={{ color: currentIndex === slideIndex ? 'white' : 'gray' }} />
             </div>
           ))}
         </div>
