@@ -14,7 +14,57 @@
     font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 1rem;
+    /* Add styles for the upper part of the container */
+    position: absolute;
+    top: 20%;
+    left: 25%;
+    transform: translateX(-50%);
+    color: white;
+    text-align: center;
+    z-index: 2;
 }
+
+.lead-text{
+    font-size: 1.25rem;
+    /* Add styles for the lower part of the container */
+    position: absolute;
+    top: 40%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    z-index: 2;
+}
+
+/*  to style the button */
+
+.play-now {
+    font-size: 1rem;
+    padding: 0.5rem 1.5rem;
+    border-radius: 1rem;
+    font-weight: bold;
+    border-radius: 1rem;
+    margin-right: 3rem;
+}
+
+.learn-btn {
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 0.5rem 1.5rem;
+    border-radius: 1rem;
+    background: #150973;
+    color: white;
+    cursor: pointer;
+}
+
+.play-now:hover {
+    background-color: #3943cf;
+    color: gray;
+  }
+.learn-btn:hover {
+    background-color: #151c80;
+    color: gray;
+  }
 
 .lead-text {
     font-size: 1.25rem;
@@ -22,7 +72,8 @@
 
 .slider-container {
     position: relative;
-    width: 80%;
+    width: 90%;
+    height: 60%;
     padding-bottom: 5%;
     user-select: none;
 }

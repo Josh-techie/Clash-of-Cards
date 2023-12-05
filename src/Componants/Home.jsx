@@ -41,40 +41,46 @@ function Home() {
     <div className="container-fluid d-flex align-items-center" style={{ backgroundImage: `url(${bgImage})`, backgroundSize: 'cover', height: '100vh' }}>
       {/* Left side with text */}
       <div className="w-100 p-4 text-container">
-        <h1 className="display-title">Your Title Here</h1>
-        <p className="lead-text">Your text content goes here.</p>
+        <h1 className="display-title">BEAUTIFUL GAME <br /> INTENSE LEARNING</h1>
+        <p className="lead-text">Welcome to Clash of Card Game, that’s easy to <br /> learn but impossible to put down!</p>
+
+        <div className="container-buttons d-flex justify-content-center">
+          <button className='btn btn-primary play-now'> PLAY NOW</button>
+          <button className='btn learn-btn'> LEARN MORE</button>
+        </div>
       </div>
+
 
       {/* Right side with slider */}
       <div className="here-container">
-        
-      <div className="slider-container">
-        <img
-          src={slides[currentIndex].url}
-          alt={`Slide ${currentIndex + 1}`}
-          className='w-100 h-100 rounded-2xl slider-image'
-        />
 
-        {/* Left Arrow */}
-        <div className='arrow-container left-arrow'>
-          <BsChevronCompactLeft className='arrow-button' onClick={prevSlide} />
-        </div>
-        {/* Right Arrow */}
-        <div className='arrow-container right-arrow'>
-          <BsChevronCompactRight className='arrow-button' onClick={nextSlide} />
-        </div>
-        {/* Dots */}
-        <div className='dots-container'>
-          {slides.map((slide, slideIndex) => (
-            <div
-              key={slideIndex}
-              onClick={() => goToSlide(slideIndex)}
-              className={`dot ${slideIndex === currentIndex ? 'active' : ''}`}
-            >
-              <RxDotFilled />
-            </div>
-          ))}
-      </div>
+        <div className="slider-container">
+          <img
+            src={slides[currentIndex].url}
+            alt={`Slide ${currentIndex + 1}`}
+            className='w-100 h-100 rounded-2xl slider-image'
+          />
+
+          {/* Left Arrow */}
+          <div className='arrow-container left-arrow'>
+            <BsChevronCompactLeft className='arrow-button' onClick={prevSlide} />
+          </div>
+          {/* Right Arrow */}
+          <div className='arrow-container right-arrow'>
+            <BsChevronCompactRight className='arrow-button' onClick={nextSlide} />
+          </div>
+          {/* Dots */}
+          <div className='dots-container'>
+            {slides.map((slide, slideIndex) => (
+              <div
+                key={slideIndex}
+                onClick={() => goToSlide(slideIndex)}
+                className={`dot ${slideIndex === currentIndex ? 'active' : ''}`}
+              >
+                <RxDotFilled />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
