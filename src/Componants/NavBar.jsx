@@ -49,6 +49,15 @@ function NavBar() {
               Contact Us
             </Link>
           </li>
+
+          <li className="nav-item d-flex buttons-holder">
+            <div className="mr-2">
+              <button className='btn btn-warning bnt-account'> Account </button>
+            </div>
+            <div>
+              <button className='btn btn-warning bnt-play'> Play </button>
+            </div>
+          </li>
         </ul>
       </div>
     </nav>

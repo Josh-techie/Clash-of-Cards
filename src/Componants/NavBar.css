@@ -41,7 +41,41 @@
 .navbar-nav {
   text-align: center;
 }
+/* here those two buttons to be in the left side */
+.buttons-holder{
+  padding-right: 6rem;
+  padding-left: 7rem;
+  justify-content: center;
+}
 
+.bnt-account {
+  text-transform: uppercase;
+  color: white;
+  font-weight: bold;
+  margin-right: 2rem;
+  background-color: #150973;
+  padding: 0.5rem 1.5rem;
+  border-radius: 1rem;
+  border: none; 
+}
+
+.bnt-account:hover {
+  background-color: #3943cf;
+}
+
+
+.bnt-play{
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 0.5rem 1.5rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.bnt-play:hover{
+  background-color: #ffde59;
+  border: none;
+}
 .nav-item {
   display: inline-block;
   color: red;
