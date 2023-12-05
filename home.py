@@ -1,12 +1,12 @@
-from flask import Flask, render_template
+from flask import Flask
+import json
 
 app = Flask(__name__)
-
+f =  open("templates/games.json")
+games = json.load(f)
 @app.route("/")
 def homepage():
-  return render_template("home.html")
-
-
+  return (games)
 
 
 
